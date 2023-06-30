@@ -22,12 +22,12 @@ public class CasaDeLasPalabrasApplication {
                    BiblioWeb.write("<body>");
                    BiblioWeb.write("<div class=\"menu\">");
                    BiblioWeb.write("<ul>");
-                   BiblioWeb.write("<<li><a href= \"#\">Opcion 1</a></li>>");
-                   BiblioWeb.write("<<li><a href= \"#\">Opcion 2</a></li>>");
-                   BiblioWeb.write("<<li><a href= \"#\">Opcion 3</a></li>>");
-                   BiblioWeb.write("<<li><a href= \"#\">Opcion 4</a></li>>");
+                   BiblioWeb.write("<<li><a href= \"#\"><img src=\"Opcion Catalogo.png\" alt=\"Catalogo\">Catalogo</a></li>>");
+                   BiblioWeb.write("<<li><a href= \"#\"><img src=\"socios.png\" alt=\"Socios\">Socios</a></li>>");
+                   BiblioWeb.write("<<li><a href= \"#\"><img src=\"tarjeta-de-miembro.png\" alt=\"Membresías\">Membresías</a></li>>");
+                   BiblioWeb.write("<<li><a href= \"#\"><img src=\"personas.png\" alt=\"Equipo\">Equipo</a></li>>");
                    BiblioWeb.write("<h1>Bienvenido a Biblioteta Casa De Las Palabras</h1>");
-                   BiblioWeb.write("<p>Contenido por agregar </p>");
+                   BiblioWeb.write("<p><img src=\"trabajo-en-contruccion.png\" alt=\"Construccion\">Sitio Web En Construcción...</p>");
                    BiblioWeb.write("</body>");
                    BiblioWeb.write("</html>");
                    

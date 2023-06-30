@@ -8,26 +8,60 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 */
 
 body{
-    font-family: Arial, sans-serif;
+    background-image: url("Recursos/Biblioteca 1.jpg");
+    background-size: cover;
+    font-family: Forte, sans-serif;
+      overflow: auto;
+
 }
 
+
 .menu{
-    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(242, 242, 242, 0.4);
     padding: 10px;
 }
 
 .menu ul{
+    display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+.menu li{
+    margin-right: 10px;
+}
 
 .menu li a {
+    display: inline-block;
     padding: 10px;
     text-decoration: none;
     color: #333;
 }
 
+.menu li a img{
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+}
+
 .menu li a:hover {
     background-color: #ddd;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+p{
+    text-align: center;
+    color: white;
+}
+
+p img{
+    width: 120px;
+    height: auto;
 }
