@@ -10,7 +10,7 @@ public class ConexionBD {
     private final String DRIVER = "oracle.jdbc.OracleDriver";
     private final String URL = "jdbc:oracle:thin:@//localhost:1521/orcl";
     private final String USER = "adminBibli";
-    private final String PASWORD = "12345";
+    private final String PASSWORD = "12345";
 
     public Connection cadena;
 
@@ -21,7 +21,7 @@ public class ConexionBD {
     public Connection conectar() {
         try {
             Class.forName(DRIVER);
-            this.cadena = DriverManager.getConnection(URL, USER, PASWORD);
+            this.cadena = DriverManager.getConnection(URL, USER, PASSWORD);
 
         } catch (ClassNotFoundException | SQLException e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
