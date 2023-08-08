@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+
+<html lang= "en">
+    <head>
+        <title>PANEL EMPLEADOS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/Empleados.css">
+        <link rel="stylesheet" href="Empleados.css" type="text/css"/>
+        
+        
+
+    </head>
+    <body>
+        <div class="header">
+    <h1>PANEL DE EMPLEADOS</h1>
+</div>
+        
+        <div class="add-button">
+    <button id="crearEmpleado">Crear Nuevo Empleado</button>
+    <button id="eliminarEmpleado">Eliminar Empleado</button>
+</div>
+        <div class="empleados-container">
+        <!-- Repetir la siguiente estructura para cada empleado -->
+        <div class="empleado">
+            <img src="Recursos/empleado.png" alt="Foto del empleado">
+            <p>Rogelio Sanchez</p>
+          <p>ID: 1001</p>
+            <p>Salario: $4000</p>
+            <p>Puesto: Gerente</p>
+            <p>Fecha de Contratación: 2023-03-07</p>
+            <p class="activo">Estado: Activo</p>
+        </div>
+
+        <div class="empleado">
+            <img src="Recursos/empleado.png" alt="Foto del empleado">
+            <p>Alejandro Rodriguez</p>
+            <p>ID: 1002</p>
+            <p>Salario: $3000</p>
+            <p>Puesto: Admn-Oficina</p>
+            <p>Fecha de Contratación: 2023-03-11</p>
+             <p class="inactivo">Estado: Inactivo</p>
+        </div>
+        
+        <div class="regresar-button">
+            <a href="/index.html">
+                <img src="Recursos/salir.png" alt="Regresar">
+            </a>
+        </div>
+        
+    </div>
+        
+        <div id="formularioEmpleado" class="dialogo" style="display: none;">
+        <h2>Crear Nuevo Empleado</h2>
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" required><br>
+        <label for="id">ID:</label>
+        <input type="number" id="id" required><br>
+        <label for="puesto">Puesto:</label>
+        <input type="text" id="puesto" required><br>
+        <label for="fechaContratacion">Fecha de Contratación:</label>
+        <input type="date" id="fechaContratacion" required><br>
+        <label for="estado">Estado:</label>
+        <select id="estado" required>
+            <option value="activo">Activo</option>
+            <option value="inactivo">Inactivo</option>
+        </select><br>
+        <button type="submit">Crear</button>
+    </form>
+</div>
+        
+        <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const crearEmpleadoButton = document.getElementById("crearEmpleado");
+        const dialogoEmpleado = document.getElementById("formularioEmpleado");
+
+        crearEmpleadoButton.addEventListener("click", () => {
+            dialogoEmpleado.style.display = "block";
+        });
+
+        const eliminarEmpleadoButton = document.getElementById("eliminarEmpleado");
+
+        eliminarEmpleadoButton.addEventListener("click", () => {
+            const empleadoId = prompt("Ingrese el ID del empleado a eliminar:");
+            const empleadoAEliminar = document.getElementById(`empleado-${empleadoId}`);
+
+            if (empleadoAEliminar) {
+                empleadoAEliminar.remove();
+                alert(`Empleado con ID ${empleadoId} eliminado.`);
+            } else {
+                alert(`No se encontró un empleado con ID ${empleadoId}.`);
+            }
+        });
+
+        const formulario = document.getElementById("formulario");
+
+        formulario.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            // Obtener los valores del formulario
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+            const id = document.getElementById("id").value;
+            const puesto = document.getElementById("puesto").value;
+            const fechaContratacion = document.getElementById("fechaContratacion").value;
+            const estado = document.getElementById("estado").value;
+
+            // Agregar un nuevo empleado a la página
+            const empleadosContainer = document.querySelector(".empleados-container");
+            const nuevoEmpleado = document.createElement("div");
+            nuevoEmpleado.className = "empleado";
+            nuevoEmpleado.id = `empleado-${id}`;
+            nuevoEmpleado.innerHTML = `
+                <div class="empleado-info">
+                    <h2>${nombre} ${apellido}</h2>
+                    <p>ID: ${id}</p>
+                    <p>Puesto: ${puesto}</p>
+                    <p>Fecha de Contratación: ${fechaContratacion}</p>
+                    <p class="${estado}">${estado}</p>
+                </div>
+            `;
+            empleadosContainer.appendChild(nuevoEmpleado);
+
+            // Cerrar el cuadro de diálogo
+            dialogoEmpleado.style.display = "none";
+        });
+    });
+</script>
+
+    </body>
+    
+    
+</html>
+
+

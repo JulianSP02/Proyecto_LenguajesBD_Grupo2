@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
 import java.io.FileWriter;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -26,6 +28,21 @@ public class StaticResourceConfiguration implements WebMvcConfigurer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CasaDeLasPalabrasApplication.class, args);
+                
+                @Controller
+                class HomeController {
+
+                @GetMapping("/")
+                public String mostrarPaginaInicio() {
+                return "index";
+                }
+
+                @GetMapping("/Empleados")
+                public String mostrarPaginaEmpleados() {
+                    return "Empleados"; // Nombre del archivo HTML
+                }
+            }
+                
                 try{
                     FileWriter BiblioWeb = new FileWriter("index.html");
                     
@@ -41,7 +58,7 @@ public class StaticResourceConfiguration implements WebMvcConfigurer {
                    BiblioWeb.write("<<li><a href= \"#\"><img src=\"Opcion Catalogo.png\" alt=\"Catalogo\">Catalogo</a></li>>");
                    BiblioWeb.write("<<li><a href= \"#\"><img src=\"socios.png\" alt=\"Socios\">Socios</a></li>>");
                    BiblioWeb.write("<<li><a href= \"#\"><img src=\"tarjeta-de-miembro.png\" alt=\"Membresías\">Membresías</a></li>>");
-                   BiblioWeb.write("<<li><a href= \"#\"><img src=\"personas.png\" alt=\"Equipo\">Equipo</a></li>>");
+                   BiblioWeb.write("<<li><a href= \"Empleados.html\"><img src=\"personas.png\" alt=\"Equipo\">Equipo</a></li>>");
                    BiblioWeb.write("<h1>Bienvenido a Biblioteta Casa De Las Palabras</h1>");
                    BiblioWeb.write("<p><img src=\"trabajo-en-contruccion.png\" alt=\"Construccion\">Sitio Web En Construcción...</p>");
                    BiblioWeb.write("</body>");

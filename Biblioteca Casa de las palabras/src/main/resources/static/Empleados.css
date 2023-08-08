@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: auto; /* Habilitar desplazamiento horizontal */
+    border: 10px solid aqua;
+}
+
+.regresar-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.regresar-button img {
+    max-width: 50px;
+    cursor: pointer;
+}
+
+.empleados-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px; /* Separación entre botón y cuadros */
+    padding: 20px; /* Espaciado interno de los cuadros */
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 40px auto 0; /* Cambiar el margen superior para agregar espacio */
+}
+
+.empleado {
+    border: 10px solid green;
+    padding: 10px;
+    width: 950px;
+    margin: 5px auto; /* Centrar los rectángulos horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.empleado img {
+    max-width: 50px;
+    margin-right: 10px; /* Espacio entre la imagen y la información */
+}
+
+.empleado p.activo {
+    color: darkgreen;
+}
+
+.empleado p.inactivo {
+    color: darkred;
+}
+
+.header {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Agregar sombra al encabezado */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px; /* Cambiar el tamaño del texto según tus preferencias */
+}
+
+.add-button {
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 10px; /* Agregar margen derecho entre los botones */
+}
+
+.add-button button#eliminarEmpleado {
+    background-color: red;
+}
+
+.add-button button#eliminarEmpleado:hover {
+    background-color: darkred;
+}
+
+.add-button button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.add-button button:hover {
+    background-color: darkgreen;
+}
+
+.dialogo {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
