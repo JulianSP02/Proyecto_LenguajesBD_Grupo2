@@ -6,6 +6,8 @@
  * Author:  rsdro
  * Created: 20 jul. 2023
  */
-
+select * from categoria;
+select * from libro;
+select * from empleado;
 
 

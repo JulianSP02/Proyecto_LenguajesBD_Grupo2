@@ -1,0 +1,107 @@
+body{
+    background-image: url("Recursos/Libros.jpg");
+    background-size: cover;
+    font-family: Forte, sans-serif;
+    overflow: auto;
+
+}
+.regresar-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.add-button {
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 10px; /* Agregar margen derecho entre los botones */
+}
+
+.add-button button#eliminarLibro {
+    background-color: red;
+}
+
+.add-button button#eliminarLibro:hover {
+    background-color: darkred;
+}
+
+.add-button button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.add-button button:hover {
+    background-color: darkgreen;
+}
+.regresar-button img {
+    max-width: 50px;
+    cursor: pointer;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(242, 242, 242, 0.4);
+    padding: 10px;
+}
+
+.menu ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li{
+    margin-right: 10px;
+}
+
+.menu li a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.menu li a img{
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.menu li a:hover {
+    background-color: #ddd;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+p{
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+p img{
+    width: 90px;
+    height: auto;
+}
+
+.libro01 img {
+    max-width: 10px;
+    margin-right: 20px; 
+    margin-top: 50px;
+    text-align: center;
+}
+
+.catalogo-container {
+    font-family: fantasy; 
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    justify-content: space-around;
+}

@@ -1,21 +1,20 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 29 jun. 2023, 16:00:02
-    Author     : rsdro
-*/
-
 body{
-    background-image: url("Recursos/Biblioteca 1.jpg");
-    background-size: cover;
+    background-image: url("Recursos/membresia.jpg");
+    background-size: auto;
     font-family: Forte, sans-serif;
-      overflow: auto;
+    overflow: auto;
 
 }
+.regresar-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
 
-
+.regresar-button img {
+    max-width: 50px;
+    cursor: pointer;
+}
 .menu{
     display: flex;
     justify-content: center;
@@ -59,13 +58,11 @@ h1{
 p{
     text-align: center;
     color: black;
-    font-family: monospace;
-    font-size: large;
-    background-color: beige;
+    background-color: white;
 }
 
 p img{
-    width: 120px;
+    width: 90px;
     height: auto;
 }
 
