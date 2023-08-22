@@ -14,7 +14,7 @@ public class DatosOracle {
         
         try{
             sSQL = "SELECT * FROM categoria";
-            Connection con = conexion.conectar();
+            Connection con = conexion.getConnection();
             Statement cn = con.createStatement();
             ResultSet res = cn.executeQuery(sSQL);
             

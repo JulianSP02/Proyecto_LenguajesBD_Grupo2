@@ -3,40 +3,27 @@ package Conexion;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class ConexionBD {
-
-    private final String DRIVER = "oracle.jdbc.OracleDriver";
-    private final String URL = "jdbc:oracle:thin:@//localhost:1521/orcl";
-    private final String USER = "adminBibli";
-    private final String PASSWORD = "12345";
-
-    public Connection cadena;
-
-    public ConexionBD() {
-         this.cadena = null;
-    }
-
-    public Connection conectar() {
-        try {
-            Class.forName(DRIVER);
-            this.cadena = DriverManager.getConnection(URL, USER, PASSWORD);
-
-        } catch (ClassNotFoundException | SQLException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
-            System.exit(0);
+    
+    public static Connection getConnection(){
+        try{
+            Class.forName("oracle.jdbc.OracleDriver");
+            String miBD = "jdbc:oracle:thin:@//localhost:1521/orcl";
+            String user = "adminBibli";
+            String password = "12345";
+            
+            Connection cn = DriverManager.getConnection(miBD, user, password);
+            
+            return cn;
+        } catch(SQLException ex){
+            System.out.println(ex.getMessage());
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ConexionBD.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return this.cadena;
-
+        return null;
     }
-
-    public void desconectar() {
-        try {
-            this.cadena.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
-        }
-    }
-
 }
