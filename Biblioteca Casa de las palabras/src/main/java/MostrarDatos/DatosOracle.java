@@ -13,7 +13,7 @@ public class DatosOracle {
         ConexionBD conexion = new ConexionBD();
         
         try{
-            sSQL = "SELECT * FROM categoria";
+            sSQL = "SELECT * FROM empleados";
             Connection con = conexion.getConnection();
             Statement cn = con.createStatement();
             ResultSet res = cn.executeQuery(sSQL);
