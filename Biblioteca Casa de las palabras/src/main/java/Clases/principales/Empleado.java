@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Conexion;
+package Clases.principales;
 
 public class Empleado {
 
@@ -11,6 +11,8 @@ public class Empleado {
     private double salario;
     private String fechaContratacion;
     private String puesto;
+    
+    public Empleado(){}
 
     // Constructor
     public Empleado(int id, String nombre, double salario, String fechaContratacion, String puesto) {
@@ -19,10 +21,6 @@ public class Empleado {
         this.salario = salario;
         this.fechaContratacion = fechaContratacion;
         this.puesto = puesto;
-    }
-
-    Empleado() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     // Getters y setters

@@ -221,12 +221,10 @@ public void LimpiarForm(){
         });
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("PANEL SOCIOS");
 
         BOTONCATALOGO.setBackground(new java.awt.Color(0, 204, 204));
         BOTONCATALOGO.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        BOTONCATALOGO.setForeground(new java.awt.Color(0, 0, 0));
         BOTONCATALOGO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/static/Recursos/buscar.png"))); // NOI18N
         BOTONCATALOGO.setText("CATALOGO");
         BOTONCATALOGO.addActionListener(new java.awt.event.ActionListener() {
@@ -237,7 +235,6 @@ public void LimpiarForm(){
 
         BOTONSOCIOS.setBackground(new java.awt.Color(0, 204, 204));
         BOTONSOCIOS.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        BOTONSOCIOS.setForeground(new java.awt.Color(0, 0, 0));
         BOTONSOCIOS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/static/Recursos/socios (1).png"))); // NOI18N
         BOTONSOCIOS.setText("SOCIOS");
         BOTONSOCIOS.addActionListener(new java.awt.event.ActionListener() {
@@ -248,7 +245,6 @@ public void LimpiarForm(){
 
         BOTONEMPLEADOS.setBackground(new java.awt.Color(0, 204, 204));
         BOTONEMPLEADOS.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        BOTONEMPLEADOS.setForeground(new java.awt.Color(0, 0, 0));
         BOTONEMPLEADOS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/static/Recursos/empleados.png"))); // NOI18N
         BOTONEMPLEADOS.setText("EMPLEADOS");
         BOTONEMPLEADOS.addActionListener(new java.awt.event.ActionListener() {
@@ -259,7 +255,6 @@ public void LimpiarForm(){
 
         BOTON.setBackground(new java.awt.Color(0, 204, 204));
         BOTON.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        BOTON.setForeground(new java.awt.Color(0, 0, 0));
         BOTON.setText("???");
         BOTON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -328,13 +323,13 @@ public void LimpiarForm(){
                         .addGap(46, 46, 46))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(BOTONSOCIOS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(BOTONEMPLEADOS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(BOTON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(BOTONCATALOGO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(BOTONCATALOGO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jButton1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)

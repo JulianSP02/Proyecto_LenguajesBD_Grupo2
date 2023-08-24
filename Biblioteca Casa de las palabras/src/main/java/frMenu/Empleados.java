@@ -3,7 +3,7 @@ package frMenu;
 
 import Conexion.EmpleadosDB;
 import javax.swing.JOptionPane;
-import Conexion.Empleado;
+import Clases.principales.Empleado;
 
 
 public class Empleados extends javax.swing.JFrame {

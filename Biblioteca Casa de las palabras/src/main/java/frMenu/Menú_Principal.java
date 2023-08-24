@@ -55,7 +55,6 @@ public class Menú_Principal extends javax.swing.JFrame {
 
         BOTONCATALOGO.setBackground(new java.awt.Color(0, 204, 204));
         BOTONCATALOGO.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        BOTONCATALOGO.setForeground(new java.awt.Color(0, 0, 0));
         BOTONCATALOGO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/static/Recursos/buscar.png"))); // NOI18N
         BOTONCATALOGO.setText("CATALOGO");
         BOTONCATALOGO.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +65,6 @@ public class Menú_Principal extends javax.swing.JFrame {
 
         BOTONSOCIOS.setBackground(new java.awt.Color(0, 204, 204));
         BOTONSOCIOS.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        BOTONSOCIOS.setForeground(new java.awt.Color(0, 0, 0));
         BOTONSOCIOS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/static/Recursos/socios (1).png"))); // NOI18N
         BOTONSOCIOS.setText("SOCIOS");
         BOTONSOCIOS.addActionListener(new java.awt.event.ActionListener() {
@@ -76,12 +74,10 @@ public class Menú_Principal extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("BIBLIOTECA");
 
         BOTONEMPLEADOS.setBackground(new java.awt.Color(0, 204, 204));
         BOTONEMPLEADOS.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        BOTONEMPLEADOS.setForeground(new java.awt.Color(0, 0, 0));
         BOTONEMPLEADOS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/static/Recursos/empleados.png"))); // NOI18N
         BOTONEMPLEADOS.setText("EMPLEADOS");
         BOTONEMPLEADOS.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +88,6 @@ public class Menú_Principal extends javax.swing.JFrame {
 
         BOTON.setBackground(new java.awt.Color(0, 204, 204));
         BOTON.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        BOTON.setForeground(new java.awt.Color(0, 0, 0));
         BOTON.setText("???");
         BOTON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,14 +96,12 @@ public class Menú_Principal extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("LA CASA DE LAS PALABRAS");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/static/Recursos/biblioteca.png"))); // NOI18N
         jLabel3.setText("jLabel3");
 
         jLabel4.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("BIENVENIDO");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -123,7 +116,7 @@ public class Menú_Principal extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addGap(240, 240, 240))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
@@ -149,12 +142,12 @@ public class Menú_Principal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BOTONCATALOGO, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BOTONSOCIOS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BOTONEMPLEADOS, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BOTON, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BOTON, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)

@@ -2,7 +2,7 @@
 package Conexion;
 
 import Conexion.ConexionBD;
-import Conexion.Empleado;
+import Clases.principales.Empleado;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
