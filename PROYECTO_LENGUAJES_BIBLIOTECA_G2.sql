@@ -135,6 +135,7 @@ VALUES (:100, 1, 23/08/2023, 23/09/2023, 'Activo');
 
 select * from prestamo;
 SELECT * FROM LIBRO;
+select * from empleados;
 
 INSERT INTO libro VALUES
 (102, 'Los Senderos del Crepúsculo', 'Elena Rodríguez', 30);
@@ -217,5 +218,136 @@ INSERT INTO libro VALUES
 INSERT INTO libro VALUES
 (141, 'El Último Suspiro', 'Marta Vargas', 10);
 
+---SP
+CREATE OR REPLACE PROCEDURE sp_buscarLibro_PorCategoria (codigo_categoria IN NUMBER)
+AS
+    CURSOR libro_cursor IS
+        SELECT l.titulo, l.autor
+        FROM libro l
+        WHERE l.categoria_id = codigo_categoria;
+
+    vtit VARCHAR2(50);
+    vaut VARCHAR2(50);
+BEGIN
+    OPEN libro_cursor;
+    LOOP
+        FETCH libro_cursor INTO vtit, vaut;
+        EXIT WHEN libro_cursor%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('Titulo del libro: ' || vtit || '\n' || 'Autor del libro: ' || vaut);
+    END LOOP;
+    CLOSE libro_cursor;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('No se encontraron libros en la categoría con código ' || codigo_categoria);
+END;
+
+
+execute sp_buscarLibro_PorCategoria(10);
+
+CREATE OR REPLACE PROCEDURE buscarEmpleado
+AS
+    nom VARCHAR2(20);
+    ape VARCHAR2(20);
+    pue VARCHAR2(20);
+    idemp NUMBER;
+    CURSOR c_empleados IS
+        SELECT id_empleado, nombre, puesto
+        FROM empleados
+        WHERE id_empleado BETWEEN 1000 AND 2000;
+BEGIN
+    FOR emp IN c_empleados
+    LOOP
+        idemp := emp.id_empleado;
+        nom := emp.nombre;
+        pue := emp.puesto;
+        
+        dbms_output.put_line('EL EMPLEADO ES: ' || idemp || ' ' || nom || ' ' || ' TRABAJA COMO ' || pue);
+    END LOOP;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        dbms_output.put_line('No se encontraron empleados en el rango especificado.');
+END;
+
+execute buscarEmpleado;
+
+--CREACION DE VISTAS
+create or replace view librosCategoria as
+select titulo, categoria_id
+from libro
+where categoria_id = 20;
+
+select * from librosCategoria;
+
+---------------------------------------------------------------------------------------
+
+create or replace view socioMembresia as
+select nombre, apellido, tipo_membresia
+from socio
+where tipo_membresia = 'Ultimate';
+
+select * from socioMembresia;
+
+---------------------------------------------------------------------------------------
+
+create or replace view empleadoPuesto as
+select nombre, puesto
+from empleados;
+
+select * from empleadoPuesto;
+
+CREATE OR REPLACE PACKAGE biblioteca_pkg IS
+    -- Procedimiento para buscar libros por categoría
+    PROCEDURE sp_buscarLibro_PorCategoria (codigo_categoria IN NUMBER);
+    
+    -- Procedimiento para buscar empleados en un rango
+    PROCEDURE buscarEmpleado;
+END biblioteca_pkg;
+
+CREATE OR REPLACE PACKAGE BODY biblioteca_pkg IS
+    -- Procedimiento para buscar libros por categoría
+    PROCEDURE sp_buscarLibro_PorCategoria (codigo_categoria IN NUMBER) IS
+        CURSOR libro_cursor IS
+            SELECT l.titulo, l.autor
+            FROM libro l
+            WHERE l.categoria_id = codigo_categoria;
+
+        vtit VARCHAR2(50);
+        vaut VARCHAR2(50);
+    BEGIN
+        OPEN libro_cursor;
+        LOOP
+            FETCH libro_cursor INTO vtit, vaut;
+            EXIT WHEN libro_cursor%NOTFOUND;
+            DBMS_OUTPUT.PUT_LINE('Titulo del libro: ' || vtit || '\n' || 'Autor del libro: ' || vaut);
+        END LOOP;
+        CLOSE libro_cursor;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            DBMS_OUTPUT.PUT_LINE('No se encontraron libros en la categoría con código ' || codigo_categoria);
+    END sp_buscarLibro_PorCategoria;
+
+    -- Procedimiento para buscar empleados en un rango
+    PROCEDURE buscarEmpleado IS
+        nom VARCHAR2(20);
+        pue VARCHAR2(20);
+        idemp NUMBER;
+        CURSOR c_empleados IS
+            SELECT id_empleado, nombre, puesto
+            FROM empleados
+            WHERE id_empleado BETWEEN 1000 AND 2000;
+    BEGIN
+        FOR emp IN c_empleados
+        LOOP
+            idemp := emp.id_empleado;
+            nom := emp.nombre;
+            pue := emp.puesto;
+
+            DBMS_OUTPUT.PUT_LINE('EL EMPLEADO ES: ' || idemp || ' ' || nom || ' ' || ' TRABAJA COMO ' || pue);
+        END LOOP;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            DBMS_OUTPUT.PUT_LINE('No se encontraron empleados en el rango especificado.');
+    END buscarEmpleado;
+END biblioteca_pkg;
 
 
