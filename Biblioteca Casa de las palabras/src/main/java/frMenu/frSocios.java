@@ -33,6 +33,7 @@ ResultSet rs;
         setTitle("PANEL SOCIOS");
         setLocationRelativeTo(null);
         setResizable(false);
+        Limpiar();
         LimpiarForm();
         ListarDatos();
     }
@@ -45,6 +46,16 @@ public void ListarDatos(){
         });
     }
 }
+
+public void Limpiar(){
+        txtID.setText("");
+        txtNombre.setText("");
+        txtApellido.setText("");
+        txtDireccion.setText("");
+        txtTelefono.setText("");
+        txtMembresia.setText("");
+    }
+
 public void LimpiarForm(){
     DefaultTableModel tb = (DefaultTableModel)tblTabla.getModel();
     for(int i = tb.getRowCount()-1;i>0;i--)
@@ -368,7 +379,7 @@ public void LimpiarForm(){
         
         try{
             cn = getConnection();
-            ps = cn.prepareStatement("UPDATE NOMBRE = ?,APELLIDO = ?,"
+            ps = cn.prepareStatement("UPDATE SOCIO SET NOMBRE = ?,APELLIDO = ?,"
                     + "DIRECCION = ?,TELEFONO = ?,TIPO_MEMBRESIA = ?"
                     + "WHERE ID_USUARIO = ?");
             ps.setString(1, txtNombre.getText());
@@ -386,6 +397,7 @@ public void LimpiarForm(){
                 JOptionPane.showMessageDialog(null, "Error a la hora de modificar!");
             }
             
+            Limpiar();
             cn.close();
             
         }catch(Exception e){
@@ -407,6 +419,7 @@ public void LimpiarForm(){
             JOptionPane.showMessageDialog(this, "Datos ingresados correctamente","",JOptionPane.INFORMATION_MESSAGE);
             bd.insertarSocios(sc);
             LimpiarForm();
+            Limpiar();
             ListarDatos();
         }else{
             JOptionPane.showMessageDialog(this, "Faltan datos por ingresar","",JOptionPane.ERROR_MESSAGE);
@@ -447,10 +460,10 @@ public void LimpiarForm(){
 
     private void BOTONCATALOGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONCATALOGOActionPerformed
         // TODO add your handling code here:
-        //Catalogo catalogoForm = new Catalogo();
+        Libros librosForm = new Libros();
 
-        // Mostrar el formulario "Catalogo"
-        //catalogoForm.setVisible(true);
+        // Mostrar el formulario "Empleados"
+        librosForm.setVisible(true);
 
     }//GEN-LAST:event_BOTONCATALOGOActionPerformed
 

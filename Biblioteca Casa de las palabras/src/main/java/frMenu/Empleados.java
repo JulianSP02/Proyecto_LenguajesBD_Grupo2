@@ -394,10 +394,10 @@ public class Empleados extends javax.swing.JFrame {
 
     private void BOTONCATALOGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONCATALOGOActionPerformed
         // TODO add your handling code here:
-        //Catalogo catalogoForm = new Catalogo();
+        Libros librosForm = new Libros();
 
-        // Mostrar el formulario "Catalogo"
-        //catalogoForm.setVisible(true);
+        // Mostrar el formulario "Empleados"
+        librosForm.setVisible(true);
         
     }//GEN-LAST:event_BOTONCATALOGOActionPerformed
 
