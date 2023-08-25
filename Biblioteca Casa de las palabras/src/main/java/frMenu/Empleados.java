@@ -47,7 +47,7 @@ public class Empleados extends javax.swing.JFrame {
         BOTONCATALOGO = new javax.swing.JButton();
         BOTONSOCIOS = new javax.swing.JButton();
         BOTONEMPLEADOS = new javax.swing.JButton();
-        BOTON = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,7 +64,6 @@ public class Empleados extends javax.swing.JFrame {
 
         ConsultarEmpleados.setBackground(new java.awt.Color(0, 102, 204));
         ConsultarEmpleados.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
-        ConsultarEmpleados.setForeground(new java.awt.Color(0, 0, 0));
         ConsultarEmpleados.setText("CONSULTAR");
         ConsultarEmpleados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,7 +73,6 @@ public class Empleados extends javax.swing.JFrame {
 
         EliminarEmpleado.setBackground(new java.awt.Color(255, 0, 0));
         EliminarEmpleado.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
-        EliminarEmpleado.setForeground(new java.awt.Color(0, 0, 0));
         EliminarEmpleado.setText("ELIMINAR");
         EliminarEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,7 +82,6 @@ public class Empleados extends javax.swing.JFrame {
 
         AgregarEmpleado1.setBackground(new java.awt.Color(102, 255, 102));
         AgregarEmpleado1.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
-        AgregarEmpleado1.setForeground(new java.awt.Color(0, 0, 0));
         AgregarEmpleado1.setText("AGREGAR");
         AgregarEmpleado1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,13 +176,14 @@ public class Empleados extends javax.swing.JFrame {
             }
         });
 
-        BOTON.setBackground(new java.awt.Color(0, 204, 204));
-        BOTON.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        BOTON.setForeground(new java.awt.Color(0, 0, 0));
-        BOTON.setText("???");
-        BOTON.addActionListener(new java.awt.event.ActionListener() {
+        jButton6.setBackground(new java.awt.Color(0, 204, 204));
+        jButton6.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(0, 0, 0));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/static/Recursos/Prestamo_1.png"))); // NOI18N
+        jButton6.setText("PRESTAMOS");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BOTONActionPerformed(evt);
+                jButton6ActionPerformed(evt);
             }
         });
 
@@ -222,11 +220,11 @@ public class Empleados extends javax.swing.JFrame {
                         .addGap(31, 31, 31))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addComponent(BOTONSOCIOS, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(BOTONEMPLEADOS)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BOTON, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(23, 23, 23))))
+                        .addComponent(BOTONEMPLEADOS)
+                        .addGap(12, 12, 12)
+                        .addComponent(jButton6)
+                        .addGap(16, 16, 16))))
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
@@ -259,12 +257,14 @@ public class Empleados extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(BOTONCATALOGO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jButton5)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(BOTONSOCIOS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BOTONEMPLEADOS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BOTON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(BOTONCATALOGO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
+                    .addComponent(BOTONEMPLEADOS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(9, 9, 9)
                 .addComponent(jLabel1)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -291,7 +291,7 @@ public class Empleados extends javax.swing.JFrame {
                 .addComponent(PuestoEmpleadoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(EliminarEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
+                    .addComponent(EliminarEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ConsultarEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(AgregarEmpleado1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
@@ -409,9 +409,13 @@ public class Empleados extends javax.swing.JFrame {
         empleadosForm.setVisible(true);
     }//GEN-LAST:event_BOTONEMPLEADOSActionPerformed
 
-    private void BOTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BOTONActionPerformed
+        Prestamos PrestamosForm = new Prestamos();
+
+        // Mostrar el formulario "Prestamos"
+        PrestamosForm.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -451,7 +455,6 @@ public class Empleados extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AgregarEmpleado1;
-    private javax.swing.JButton BOTON;
     private javax.swing.JButton BOTONCATALOGO;
     private javax.swing.JButton BOTONEMPLEADOS;
     private javax.swing.JButton BOTONSOCIOS;
@@ -463,6 +466,7 @@ public class Empleados extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> PuestoEmpleadoComboBox;
     private javax.swing.JTextField SalarioEmpleado;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

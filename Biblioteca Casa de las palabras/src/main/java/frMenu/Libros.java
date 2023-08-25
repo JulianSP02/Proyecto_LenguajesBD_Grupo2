@@ -73,7 +73,6 @@ LibrosBD bd = new LibrosBD();
         btnCatalogo = new javax.swing.JButton();
         btnSocios = new javax.swing.JButton();
         btnEmpleados = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
@@ -92,6 +91,7 @@ LibrosBD bd = new LibrosBD();
         btnActualizar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
         label1 = new java.awt.Label();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 255));
@@ -117,6 +117,7 @@ LibrosBD bd = new LibrosBD();
 
         btnCatalogo.setBackground(new java.awt.Color(0, 204, 204));
         btnCatalogo.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        btnCatalogo.setForeground(new java.awt.Color(0, 0, 0));
         btnCatalogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/static/Recursos/buscar.png"))); // NOI18N
         btnCatalogo.setText("CATALOGO");
         btnCatalogo.addActionListener(new java.awt.event.ActionListener() {
@@ -127,6 +128,7 @@ LibrosBD bd = new LibrosBD();
 
         btnSocios.setBackground(new java.awt.Color(0, 204, 204));
         btnSocios.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        btnSocios.setForeground(new java.awt.Color(0, 0, 0));
         btnSocios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/static/Recursos/socios (1).png"))); // NOI18N
         btnSocios.setText("SOCIOS");
         btnSocios.addActionListener(new java.awt.event.ActionListener() {
@@ -137,6 +139,7 @@ LibrosBD bd = new LibrosBD();
 
         btnEmpleados.setBackground(new java.awt.Color(0, 204, 204));
         btnEmpleados.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        btnEmpleados.setForeground(new java.awt.Color(0, 0, 0));
         btnEmpleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/static/Recursos/empleados.png"))); // NOI18N
         btnEmpleados.setText("EMPLEADOS");
         btnEmpleados.addActionListener(new java.awt.event.ActionListener() {
@@ -144,10 +147,6 @@ LibrosBD bd = new LibrosBD();
                 btnEmpleadosActionPerformed(evt);
             }
         });
-
-        jButton5.setBackground(new java.awt.Color(0, 204, 204));
-        jButton5.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jButton5.setText("?????");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -238,23 +237,23 @@ LibrosBD bd = new LibrosBD();
         label1.setForeground(new java.awt.Color(255, 255, 255));
         label1.setText("CATALOGO");
 
+        jButton6.setBackground(new java.awt.Color(0, 204, 204));
+        jButton6.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(0, 0, 0));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/static/Recursos/Prestamo_1.png"))); // NOI18N
+        jButton6.setText("PRESTAMOS");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnCerrar)
-                        .addGap(48, 48, 48)
-                        .addComponent(btnCatalogo, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSocios, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(179, 179, 179)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -271,8 +270,21 @@ LibrosBD bd = new LibrosBD();
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(355, 355, 355)
-                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(btnCerrar)
+                                .addGap(48, 48, 48)
+                                .addComponent(btnCatalogo, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnSocios, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(355, 355, 355)
+                                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton6)))
                 .addContainerGap(58, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -284,9 +296,9 @@ LibrosBD bd = new LibrosBD();
                         .addComponent(btnCatalogo, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnSocios, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton6))
                     .addComponent(btnCerrar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -409,6 +421,14 @@ LibrosBD bd = new LibrosBD();
         
     }//GEN-LAST:event_btnBorrarActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        Prestamos PrestamosForm = new Prestamos();
+
+        // Mostrar el formulario "Prestamos"
+        PrestamosForm.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -454,7 +474,7 @@ LibrosBD bd = new LibrosBD();
     private javax.swing.JButton btnEmpleados;
     private javax.swing.JButton btnNuevo;
     private javax.swing.JButton btnSocios;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
